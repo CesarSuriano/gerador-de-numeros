@@ -1,5 +1,6 @@
 package com.example.cesar.jogodobicho;
 
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
@@ -9,16 +10,16 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private TextView definirTitulares;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        definirTitulares = (TextView) findViewById(R.id.txtDefinirTitulares);
     }
 
-    public void click(View view) {
-        TextView txt = (TextView) findViewById(R.id.txt);
-        txt.setBackgroundResource(R.drawable.circle_text);
-    }
 
     public void definirTitulares(View view) {
         FragmentManager fm = getSupportFragmentManager();

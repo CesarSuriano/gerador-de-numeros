@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.EditText;
+import android.widget.TextView;
 
 
 /**
@@ -18,6 +19,7 @@ import android.widget.EditText;
 public class PegaTitulares extends DialogFragment {
 
     private EditText mEditText;
+    private TextView mTextView;
 
     public PegaTitulares() {
         // Empty constructor is required for DialogFragment
@@ -43,7 +45,8 @@ public class PegaTitulares extends DialogFragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         // Get field from view
-        mEditText = (EditText) view.findViewById(R.id.txt_your_name);
+        //mEditText = (EditText) view.findViewById(R.id.txt_your_name);
+        mTextView = (TextView) view.findViewById(R.id.lbl_your_name);
         // Fetch arguments from bundle and set title
         String title = getArguments().getString("title", "Enter Name");
         getDialog().setTitle(title);

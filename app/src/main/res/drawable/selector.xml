@@ -3,11 +3,11 @@
 
     <item
         android:state_pressed="true"
-        android:drawable="@drawable/circle_text"
+        android:drawable="@drawable/circle_press"
         />
 
     <item
-        android:drawable="@drawable/circle_text_borda"
+        android:drawable="@drawable/circle"
         />
 
 </selector>
