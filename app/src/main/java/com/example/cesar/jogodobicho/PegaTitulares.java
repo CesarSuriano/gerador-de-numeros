@@ -1,10 +1,12 @@
 package com.example.cesar.jogodobicho;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,43 +18,65 @@ import android.widget.TextView;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class PegaTitulares extends DialogFragment {
+public class PegaTitulares extends DialogFragment implements TextView.OnEditorActionListener {
 
     private EditText mEditText;
-    private TextView mTextView;
 
-    public PegaTitulares() {
-        // Empty constructor is required for DialogFragment
-        // Make sure not to add arguments to the constructor
-        // Use `newInstance` instead as shown below
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        //setStyle(android.app.DialogFragment.STYLE_NO_TITLE, R.style.MeuDialog);
     }
 
-    public static PegaTitulares newInstance(String title) {
-        PegaTitulares frag = new PegaTitulares();
-        Bundle args = new Bundle();
-        args.putString("title", title);
-        frag.setArguments(args);
-        return frag;
+    public interface UserNameListener {
+        void onFinishUserDialog(String user);
+    }
+
+//    @Override
+//    public void onStart() {
+//        super.onStart();
+//
+//
+//        if (getDialog() == null)
+//            return;
+//
+//        int dialogWidth = 600;
+//        int dialogHeight = 400;
+//
+//        getDialog().getWindow().setLayout(dialogWidth, dialogHeight);
+//
+//    }
+
+    // Empty constructor required for DialogFragment
+    public PegaTitulares() {
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_pega_titulares, container);
-    }
+        View view = inflater.inflate(R.layout.fragment_pega_titulares, container);
+        mEditText = (EditText) view.findViewById(R.id.username);
 
-    @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        // Get field from view
-        //mEditText = (EditText) view.findViewById(R.id.txt_your_name);
-        mTextView = (TextView) view.findViewById(R.id.lbl_your_name);
-        // Fetch arguments from bundle and set title
-        String title = getArguments().getString("title", "Enter Name");
-        getDialog().setTitle(title);
-        // Show soft keyboard automatically and request focus to field
+        // set this instance as callback for editor action
+        mEditText.setOnEditorActionListener(this);
         mEditText.requestFocus();
         getDialog().getWindow().setSoftInputMode(
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
+        getDialog().setTitle("Please enter username");
+
+        return view;
+    }
+
+    @Override
+    public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+        // Return input text to activity
+        UserNameListener activity = (UserNameListener) getActivity();
+        activity.onFinishUserDialog(mEditText.getText().toString());
+        this.dismiss();
+        return true;
+    }
+
+    public void clickFinish(Context context){
     }
 }

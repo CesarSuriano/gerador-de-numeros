@@ -7,8 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements PegaTitulares.UserNameListener {
 
     private TextView definirTitulares;
 
@@ -23,8 +24,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void definirTitulares(View view) {
         FragmentManager fm = getSupportFragmentManager();
-        PegaTitulares pegaTitulares = PegaTitulares.newInstance("Some Title");
-        pegaTitulares.show(fm, "fragment_edit_name");
+        PegaTitulares dialogFragment = new PegaTitulares ();
+        dialogFragment.show(fm, "Sample Fragment");
 
+    }
+
+    @Override
+    public void onFinishUserDialog(String user) {
+        Toast.makeText(this, "Hello, " + user, Toast.LENGTH_SHORT).show();
     }
 }
