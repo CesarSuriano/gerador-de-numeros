@@ -20,6 +20,7 @@
         android:layout_height="150dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
+        android:onClick="gerarNumeros"
         android:background="@drawable/selector"
         android:id="@+id/btnGerar" />
 
