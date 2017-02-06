@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -60,6 +61,8 @@ public class PegaTitulares extends DialogFragment implements View.OnClickListene
     private TextView lbl23;
     private TextView lbl24;
     private TextView lbl25;
+
+    private Button btnOK;
 
 
     @Override
@@ -147,6 +150,7 @@ public class PegaTitulares extends DialogFragment implements View.OnClickListene
             case R.id.lbl_25:
                 Log.e("Teste", "25");
                 break;
+
 
         }
     }
@@ -257,6 +261,16 @@ public class PegaTitulares extends DialogFragment implements View.OnClickListene
 
         lbl25 = (TextView) view.findViewById(R.id.lbl_25);
         lbl25.setOnClickListener(this);
+
+        btnOK = (Button)view.findViewById(R.id.btnOK);
+
+        btnOK.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i("Botao", "Clicou");
+                dismiss();
+            }
+        });
 
 //        lbl25 = (TextView) view.findViewById(R.id.lbl_25);
 //

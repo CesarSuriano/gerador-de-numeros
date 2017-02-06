@@ -301,6 +301,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/btnOK"
         android:layout_below="@+id/layout_05"
         android:text="finish" />
 </RelativeLayout>
