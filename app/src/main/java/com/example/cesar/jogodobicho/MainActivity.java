@@ -1,5 +1,6 @@
 package com.example.cesar.jogodobicho;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.support.design.widget.BottomSheetDialogFragment;
@@ -29,8 +30,6 @@ public class MainActivity extends AppCompatActivity implements PegaTitulares.Use
         setContentView(R.layout.activity_main);
 
         definirTitulares = (TextView) findViewById(R.id.txtDefinirTitulares);
-
-
     }
 
 
@@ -62,5 +61,8 @@ public class MainActivity extends AppCompatActivity implements PegaTitulares.Use
         for (Integer i : LISTA_TITULARES) {
             Log.e("Numeros: ", ""+ i);
         }
+
+        startActivity(new Intent(MainActivity.this, MostraResultados.class));
+
     }
 }
