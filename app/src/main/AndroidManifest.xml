@@ -19,7 +19,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.SplashActivity" />
-        <activity android:name=".activities.MostraResultadosActivity"></activity>
+        <activity android:name=".activities.MostraResultadosActivity"
+            android:theme="@style/ThemeResultado">
+
+        </activity>
     </application>
 
 </manifest>

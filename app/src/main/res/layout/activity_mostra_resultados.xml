@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="8dp"
+    style="@style/ThemeResultado"
     tools:context="com.example.cesar.jogodobicho.activities.MostraResultadosActivity">
 
 

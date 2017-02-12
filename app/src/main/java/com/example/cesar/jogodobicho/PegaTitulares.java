@@ -126,6 +126,7 @@ public class PegaTitulares extends DialogFragment implements View.OnClickListene
                 break;
             case R.id.lbl_20:
                 Log.e("Teste", "20");
+                break;
             case R.id.lbl_21:
                 Log.e("Teste", "21");
                 break;

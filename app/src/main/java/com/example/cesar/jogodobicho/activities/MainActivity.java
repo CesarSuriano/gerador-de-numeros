@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity implements PegaTitulares.Use
 
     private TextView definirTitulares;
 
-    public static List<Integer> LISTA_TITULARES = new ArrayList<Integer>();
+    public static ArrayList<Integer> LISTA_TITULARES = new ArrayList<Integer>();
 
     BottomSheetDialogFragment bsdFragment;
 
@@ -33,8 +33,6 @@ public class MainActivity extends AppCompatActivity implements PegaTitulares.Use
 
         definirTitulares = (TextView) findViewById(R.id.txtDefinirTitulares);
     }
-
-
 
 
     public void definirTitulares(View view) {
@@ -60,11 +58,13 @@ public class MainActivity extends AppCompatActivity implements PegaTitulares.Use
     }
 
     public void gerarNumeros(View view) {
-        for (Integer i : LISTA_TITULARES) {
-            Log.e("Numeros: ", ""+ i);
-        }
+        String str = "nada";
 
-        startActivity(new Intent(MainActivity.this, MostraResultadosActivity.class));
+        Intent it = new Intent(MainActivity.this, MostraResultadosActivity.class);
+//        Bundle params = new Bundle();
+//        params.putParcelableArrayList("num", LISTA_TITULARES);
+        it.putIntegerArrayListExtra("titulares",LISTA_TITULARES);
+        startActivity(it);
 
     }
 }
