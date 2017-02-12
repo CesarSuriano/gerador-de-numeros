@@ -54,12 +54,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
 
     @Override
     public void onBindViewHolder(RecyclerAdapter.RecyclerViewHolder holder, int position) {
-        holder.tvAvatar.setText(teste);
+        holder.tvAvatar.setText(position + 1 + "");
     }
 
     @Override
     public int getItemCount() {
-        return 2;
+        return 10;
     }
 
 

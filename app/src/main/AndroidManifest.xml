@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:theme="@style/AppTheme">
             /
             <intent-filter>
@@ -18,8 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SplashActivity" />
-        <activity android:name=".MostraResultados"></activity>
+        <activity android:name=".activities.SplashActivity" />
+        <activity android:name=".activities.MostraResultadosActivity"></activity>
     </application>
 
 </manifest>

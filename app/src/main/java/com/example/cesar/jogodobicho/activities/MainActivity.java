@@ -1,8 +1,6 @@
-package com.example.cesar.jogodobicho;
+package com.example.cesar.jogodobicho.activities;
 
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.support.design.widget.BottomSheetDialogFragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +9,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.cesar.jogodobicho.BottomSheetModalFragment;
+import com.example.cesar.jogodobicho.PegaTitulares;
+import com.example.cesar.jogodobicho.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -62,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements PegaTitulares.Use
             Log.e("Numeros: ", ""+ i);
         }
 
-        startActivity(new Intent(MainActivity.this, MostraResultados.class));
+        startActivity(new Intent(MainActivity.this, MostraResultadosActivity.class));
 
     }
 }

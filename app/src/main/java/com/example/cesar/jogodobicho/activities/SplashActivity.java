@@ -1,4 +1,4 @@
-package com.example.cesar.jogodobicho;
+package com.example.cesar.jogodobicho.activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

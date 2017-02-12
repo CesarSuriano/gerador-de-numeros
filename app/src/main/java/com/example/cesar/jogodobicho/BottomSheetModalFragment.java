@@ -11,7 +11,8 @@ import android.view.ViewGroup;
  */
 
 public class BottomSheetModalFragment extends BottomSheetDialogFragment {
-    static BottomSheetModalFragment newInstance() {
+
+    public static BottomSheetModalFragment newInstance() {
         return new BottomSheetModalFragment();
     }
 

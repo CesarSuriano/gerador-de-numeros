@@ -1,11 +1,14 @@
-package com.example.cesar.jogodobicho;
+package com.example.cesar.jogodobicho.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-public class MostraResultados extends AppCompatActivity {
+import com.example.cesar.jogodobicho.R;
+import com.example.cesar.jogodobicho.RecyclerAdapter;
+
+public class MostraResultadosActivity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
     private LinearLayoutManager mLinearLayoutManager;
