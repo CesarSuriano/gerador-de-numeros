@@ -26,23 +26,24 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
 
     public static class RecyclerViewHolder extends RecyclerView.ViewHolder {
 
-        TextView tv1, tv2, tv3, tv4 , tv5, tv6, tv7, tv8, tv9, tv10, tvAvatar;
+        TextView[] txtNumeros = new TextView[10];//{} tv1, tv2, tv3, tv4 , tv5, tv6, tv7, tv8, tv9, tv10,
+        TextView tvAvatar;
         ImageView imageView;
         public List<Integer> lista;
 
         public RecyclerViewHolder(View itemView) {
             super(itemView);
 //
-            tv1 = (TextView) itemView.findViewById(R.id.txt1);
-            tv2 = (TextView) itemView.findViewById(R.id.txt2);
-            tv3 = (TextView) itemView.findViewById(R.id.txt3);
-            tv4 = (TextView) itemView.findViewById(R.id.txt4);
-            tv5 = (TextView) itemView.findViewById(R.id.txt5);
-            tv6 = (TextView) itemView.findViewById(R.id.txt6);
-            tv7 = (TextView) itemView.findViewById(R.id.txt7);
-            tv8 = (TextView) itemView.findViewById(R.id.txt8);
-            tv9 = (TextView) itemView.findViewById(R.id.txt9);
-            tv10 = (TextView) itemView.findViewById(R.id.txt10);
+            txtNumeros[0] = (TextView) itemView.findViewById(R.id.txt1);
+            txtNumeros[1] = (TextView) itemView.findViewById(R.id.txt2);
+            txtNumeros[2] = (TextView) itemView.findViewById(R.id.txt3);
+            txtNumeros[3] = (TextView) itemView.findViewById(R.id.txt4);
+            txtNumeros[4] = (TextView) itemView.findViewById(R.id.txt5);
+            txtNumeros[5] = (TextView) itemView.findViewById(R.id.txt6);
+            txtNumeros[6] = (TextView) itemView.findViewById(R.id.txt7);
+            txtNumeros[7] = (TextView) itemView.findViewById(R.id.txt8);
+            txtNumeros[8] = (TextView) itemView.findViewById(R.id.txt9);
+            txtNumeros[9] = (TextView) itemView.findViewById(R.id.txt10);
 
 
 
@@ -66,8 +67,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
     @Override
     public void onBindViewHolder(RecyclerAdapter.RecyclerViewHolder holder, int position) {
         holder.tvAvatar.setText(position + 1 + "");
-        holder.tv6.setText(titulares.get(0).toString());
-        holder.tv7.setText(titulares.get(1).toString());
+
+        for (int i = 0; i < titulares.size(); i++){
+            holder.txtNumeros[i].setText(titulares.get(i).toString());
+        }
        // holder.tv8.setText(titulares.get(2).toString());
     }
 
