@@ -31,7 +31,7 @@
         android:id="@+id/txtDefinirTitulares"
         android:textAlignment="center"
         android:padding="16dp"
-        android:onClick="definirTitulares"
+        android:onClick="mostraModal"
         android:layout_alignParentBottom="true" />
 
 </RelativeLayout>

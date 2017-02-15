@@ -5,19 +5,17 @@ import android.support.design.widget.BottomSheetDialogFragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.cesar.jogodobicho.BottomSheetModalFragment;
-import com.example.cesar.jogodobicho.PegaTitulares;
+import com.example.cesar.jogodobicho.PegaNumeros;
 import com.example.cesar.jogodobicho.R;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements PegaTitulares.UserNameListener {
+public class MainActivity extends AppCompatActivity implements PegaNumeros.UserNameListener {
 
     private TextView definirTitulares;
 
@@ -35,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements PegaTitulares.Use
     }
 
 
-    public void definirTitulares(View view) {
+    public void mostraModal(View view) {
 
         bsdFragment =
                 BottomSheetModalFragment.newInstance();
@@ -45,9 +43,16 @@ public class MainActivity extends AppCompatActivity implements PegaTitulares.Use
 
     }
 
-    public void definirTitulares2(View view){
+    public void definirNumeros(View view) {
         FragmentManager fm = getSupportFragmentManager();
-        PegaTitulares dialogFragment = new PegaTitulares ();
+        PegaNumeros dialogFragment = new PegaNumeros();
+        if (view.getId() == R.id.item_modal_titulares) {
+            dialogFragment.setIsTitular(true);
+        }
+        else if (view.getId() == R.id.item_modal_ruins) {
+            dialogFragment.setIsTitular(false);
+        }
+
         dialogFragment.show(fm, "Sample Fragment");
         bsdFragment.dismiss();
     }
@@ -63,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements PegaTitulares.Use
         Intent it = new Intent(MainActivity.this, MostraResultadosActivity.class);
 //        Bundle params = new Bundle();
 //        params.putParcelableArrayList("num", LISTA_TITULARES);
-        it.putIntegerArrayListExtra("titulares",LISTA_TITULARES);
+        it.putIntegerArrayListExtra("titulares", LISTA_TITULARES);
         startActivity(it);
 
     }

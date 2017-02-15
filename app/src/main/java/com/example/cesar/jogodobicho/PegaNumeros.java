@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.cesar.jogodobicho.R;
 import com.example.cesar.jogodobicho.activities.MainActivity;
@@ -20,11 +21,10 @@ import com.example.cesar.jogodobicho.activities.MainActivity;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class PegaTitulares extends DialogFragment implements View.OnClickListener {
+public class PegaNumeros extends DialogFragment implements View.OnClickListener {
 
     private TextView mTextview;
-
-    public  int LISTA_TITULARES;
+    private boolean isTitular;
 
     //private TextView lbl01;
     private TextView lbl01;
@@ -55,7 +55,6 @@ public class PegaTitulares extends DialogFragment implements View.OnClickListene
 
     private Button btnOK;
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,6 +64,14 @@ public class PegaTitulares extends DialogFragment implements View.OnClickListene
     @Override
     public void onClick(View view) {
         TextView numSelecionardo = (TextView) view;
+
+        if(isTitular){
+            Toast.makeText(getContext(), "é titular", Toast.LENGTH_SHORT).show();
+        }
+        else{
+            Toast.makeText(getContext(), "e ruim", Toast.LENGTH_SHORT).show();
+        }
+
         MainActivity.LISTA_TITULARES.add(Integer.parseInt(numSelecionardo.getText().toString()));
         switch (view.getId()) {
             case R.id.lbl_01:
@@ -151,24 +158,17 @@ public class PegaTitulares extends DialogFragment implements View.OnClickListene
         void onFinishUserDialog(String user);
     }
 
-//    @Override
-//    public void onStart() {
-//        super.onStart();
-//
-//
-//        if (getDialog() == null)
-//            return;
-//
-//        int dialogWidth = 600;
-//        int dialogHeight = 400;
-//
-//        getDialog().getWindow().setLayout(dialogWidth, dialogHeight);
-//
-//    }
-
     // Empty constructor required for DialogFragment
-    public PegaTitulares() {
+    public PegaNumeros() {
 
+    }
+
+    public boolean isTitular() {
+        return isTitular;
+    }
+
+    public void setIsTitular(boolean titular) {
+        isTitular = titular;
     }
 
     @Override
@@ -263,28 +263,9 @@ public class PegaTitulares extends DialogFragment implements View.OnClickListene
                 dismiss();
             }
         });
-
-//        lbl25 = (TextView) view.findViewById(R.id.lbl_25);
-//
-//        lbl25.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                TextView txt = (TextView)view;
-//                Log.e("Teste", txt.getText().toString());
-//            }
-//        });
-
         return view;
     }
 
-//    @Override
-//    public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-//        // Return input text to activity
-//        UserNameListener activity = (UserNameListener) getActivity();
-//        activity.onFinishUserDialog(mTextview.getText().toString());
-//        this.dismiss();
-//        return true;
-//    }
 
 
     public void clickFinish(Context context) {
