@@ -1,1 +1,1 @@
-# gerador-de-numeros
+# gerador-de-numeros-aleatórios
