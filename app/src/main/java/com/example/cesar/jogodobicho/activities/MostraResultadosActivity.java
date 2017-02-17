@@ -33,7 +33,11 @@ public class MostraResultadosActivity extends AppCompatActivity {
         Bundle params = it.getExtras();
 
         List<Integer> titulares = params.getIntegerArrayList("titulares");
+        List<Integer> ruins = params.getIntegerArrayList("ruins");
         Collections.sort(titulares);
+        Collections.sort(ruins);
+
+        Toast.makeText(this, ""+ruins.get(0), Toast.LENGTH_SHORT).show();
 
         for(int i = 0; i < 25; i++){
 //            if (titulares.size() > i) {
@@ -41,7 +45,7 @@ public class MostraResultadosActivity extends AppCompatActivity {
 //                    Log.e("teste", numerosBichos[i]);
 //                }
 //            }
-            if(titulares.contains(i)){
+            if(titulares.contains(i) || ruins.contains(i)){
                 continue;
             }
 

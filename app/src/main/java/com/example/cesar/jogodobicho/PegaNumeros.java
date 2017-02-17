@@ -66,13 +66,13 @@ public class PegaNumeros extends DialogFragment implements View.OnClickListener 
         TextView numSelecionardo = (TextView) view;
 
         if(isTitular){
-            Toast.makeText(getContext(), "é titular", Toast.LENGTH_SHORT).show();
+            MainActivity.LISTA_TITULARES.add(Integer.parseInt(numSelecionardo.getText().toString()));
         }
         else{
-            Toast.makeText(getContext(), "e ruim", Toast.LENGTH_SHORT).show();
+            MainActivity.LISTA_RUINS.add(Integer.parseInt(numSelecionardo.getText().toString()));
         }
 
-        MainActivity.LISTA_TITULARES.add(Integer.parseInt(numSelecionardo.getText().toString()));
+
         switch (view.getId()) {
             case R.id.lbl_01:
                 Log.e("Teste", "01");
