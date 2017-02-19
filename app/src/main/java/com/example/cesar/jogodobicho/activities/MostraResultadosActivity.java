@@ -37,7 +37,6 @@ public class MostraResultadosActivity extends AppCompatActivity {
         Collections.sort(titulares);
         Collections.sort(ruins);
 
-        Toast.makeText(this, ""+ruins.get(0), Toast.LENGTH_SHORT).show();
 
         for(int i = 0; i < 25; i++){
 //            if (titulares.size() > i) {
