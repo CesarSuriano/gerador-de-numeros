@@ -44,7 +44,7 @@ public class MostraResultadosActivity extends AppCompatActivity {
 //                    Log.e("teste", numerosBichos[i]);
 //                }
 //            }
-            if(titulares.contains(i) || ruins.contains(i)){
+            if(titulares.contains(i) || ruins.contains(i) || i == 0){
                 continue;
             }
 
