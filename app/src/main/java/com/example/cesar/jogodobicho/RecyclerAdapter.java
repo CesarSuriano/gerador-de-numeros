@@ -27,7 +27,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
     private List<Integer> numerosTitulares = new ArrayList<Integer>();
     private List<Integer> numerosSortear = new ArrayList<Integer>();
     //private List[] numerosFinais = new ArrayList[10];
-    private List<List<Integer>> numerosFinais = new ArrayList<List<Integer>>();
+    //private List<Integer> numerosFinais = new ArrayList<Integer>();
+
+    private ArrayList<Integer>[][] numerosFinais = new ArrayList[10][10];
 
     int num1, num2, num3, num4, num5;
 
@@ -86,25 +88,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
         holder.tvAvatar.setText(position + 1 + "");
 
 
-        //for (int i = 0; i <10; i++) {
+        for (int i = 0; i <10; i++) {
 
-                holder.txtNumeros[0].setText(numerosFinais.get(position).get(0).toString());
-
-
-        //}
+                holder.txtNumeros[i].setText(numerosFinais[position][i].toString().replace("[", " ").replace("]", " "));
 
 
-//        geraNumeros();
-//        int contador = 0;
-//        for (int i = 0; i < titulares.size(); i++){
-//            holder.txtNumeros[i].setText(titulares.get(i).toString());
-//            contador ++;
-//        }
-//
-//        for (int i = contador, j = 0; i < 10; i++, j++){
-//            holder.txtNumeros[i].setText(numerosSortear.get(j).toString());
-//        }
-       // holder.tv8.setText(titulares.get(2).toString());
+        }
+
     }
 
     @Override
@@ -115,38 +105,22 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
 
     public void geraNumeros() {
 
-        //Collections.shuffle(numerosSortear);
+        //
 
         for ( int i = 0; i < 10; i++ ){
-            for (int j : numerosTitulares) {
-                Log.e("o que tem no j:", ""+j);
-                numerosFinais.add(i, Arrays.asList(j));
+            Collections.shuffle(numerosSortear);
+            for (int j = 0; j < numerosTitulares.size(); j++) {
+//                Log.e("o que tem no j:", "" + j);
+//                numerosFinais.add(i, Arrays.asList(j));
+                numerosFinais[i][j] = new ArrayList<Integer>();
+                numerosFinais[i][j].add(numerosTitulares.get(j));
             }
 
+            for (int f = numerosTitulares.size(); f < 10; f++){
+                numerosFinais[i][f] = new ArrayList<Integer>();
+                numerosFinais[i][f].add(numerosSortear.get(f));
+            }
         }
-        Log.e("Teste", numerosFinais.toString());
     }
-
-    public void embaralha() {
-        //Collections.shuffle(lista2);
-
-        Random gerador = new Random();
-        num1 = gerador.nextInt(16);
-        num2 = gerador.nextInt(16);
-        num3 = gerador.nextInt(16);
-        num4 = gerador.nextInt(16);
-        num5 = gerador.nextInt(16);
-
-        if (num1 == num2 || num1 == num3 || num1 == num4 || num1 == num5 ||
-                num2 == num3 || num2 == num4 || num2 == num5 || num3 == num4 ||
-                num3 == num5 || num4 == num5) {
-
-            embaralha();
-        }
-
-
-    }
-
-
 
 }
