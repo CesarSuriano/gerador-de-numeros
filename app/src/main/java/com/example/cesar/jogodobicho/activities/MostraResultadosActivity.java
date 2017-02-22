@@ -5,7 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.example.cesar.jogodobicho.R;
@@ -29,6 +32,28 @@ public class MostraResultadosActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mostra_resultados);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        // ou
+        //setActionBar(tlb);
+
+        // Apos isso, podera configurar sua Action Bar normalmente
+        // Por exemplo:
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
+        //tlb.setTitle("Números gerados");
+        
+
+
         Intent it = getIntent();
         Bundle params = it.getExtras();
 
@@ -38,13 +63,13 @@ public class MostraResultadosActivity extends AppCompatActivity {
         Collections.sort(ruins);
 
 
-        for(int i = 0; i < 25; i++){
+        for(int i = 1; i < 26; i++){
 //            if (titulares.size() > i) {
 //                if (numerosBichos[i].equals(titulares.get(i))) {
 //                    Log.e("teste", numerosBichos[i]);
 //                }
 //            }
-            if(titulares.contains(i) || ruins.contains(i) || i == 0){
+            if(titulares.contains(i) || ruins.contains(i)){
                 continue;
             }
 
@@ -59,4 +84,12 @@ public class MostraResultadosActivity extends AppCompatActivity {
         RecyclerAdapter adapter = new RecyclerAdapter(titulares, numerosSortear);
         mRecyclerView.setAdapter(adapter);
     }
+
+    @Override
+    public void onBackPressed(){
+        finish();
+        MainActivity.LISTA_TITULARES.clear();
+        MainActivity.LISTA_RUINS.clear();
+    }
+
 }
