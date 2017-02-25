@@ -24,7 +24,7 @@ public class MostraResultadosActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private LinearLayoutManager mLinearLayoutManager;
     private RecyclerAdapter mAdapter;
-    List<Integer> numerosSortear = new ArrayList<Integer>();//= {"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15",
+    List<String> numerosSortear = new ArrayList<String>();//= {"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15",
 //            "16", "17", "18", "19", "20", "21", "22", "23", "24", "25"
 //    };
 
@@ -54,23 +54,30 @@ public class MostraResultadosActivity extends AppCompatActivity {
         Intent it = getIntent();
         Bundle params = it.getExtras();
 
-        List<Integer> titulares = params.getIntegerArrayList("titulares");
-        List<Integer> ruins = params.getIntegerArrayList("ruins");
+        List<String> titulares = params.getStringArrayList("titulares");
+        List<String> ruins = params.getStringArrayList("ruins");
         Collections.sort(titulares);
         Collections.sort(ruins);
 
-
+        String comparador;
         for(int i = 1; i < 26; i++){
+
+            if (i < 10){
+                comparador = 0 + "" + i;
+            }
+            else{
+                comparador = "" + i;
+            }
 //            if (titulares.size() > i) {
 //                if (numerosBichos[i].equals(titulares.get(i))) {
 //                    Log.e("teste", numerosBichos[i]);
 //                }
 //            }
-            if(titulares.contains(i) || ruins.contains(i)){
+            if(titulares.contains(comparador) || ruins.contains(comparador)){
                 continue;
             }
 
-            numerosSortear.add(i);
+            numerosSortear.add(comparador);
 
         }
 

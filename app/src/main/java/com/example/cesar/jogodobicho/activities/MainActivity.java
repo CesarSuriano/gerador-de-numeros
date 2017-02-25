@@ -19,8 +19,8 @@ public class MainActivity extends AppCompatActivity implements PegaNumeros.UserN
 
     private TextView definirTitulares;
 
-    public static ArrayList<Integer> LISTA_TITULARES = new ArrayList<Integer>();
-    public static ArrayList<Integer> LISTA_RUINS = new ArrayList<Integer>();
+    public static ArrayList<String> LISTA_TITULARES = new ArrayList<String>();
+    public static ArrayList<String> LISTA_RUINS = new ArrayList<String>();
 
     BottomSheetDialogFragment bsdFragment;
 
@@ -69,8 +69,8 @@ public class MainActivity extends AppCompatActivity implements PegaNumeros.UserN
         Intent it = new Intent(MainActivity.this, MostraResultadosActivity.class);
 //        Bundle params = new Bundle();
 //        params.putParcelableArrayList("num", LISTA_TITULARES);
-        it.putIntegerArrayListExtra("titulares", LISTA_TITULARES);
-        it.putIntegerArrayListExtra("ruins", LISTA_RUINS);
+        it.putStringArrayListExtra("titulares", LISTA_TITULARES);
+        it.putStringArrayListExtra("ruins", LISTA_RUINS);
         startActivity(it);
 
     }

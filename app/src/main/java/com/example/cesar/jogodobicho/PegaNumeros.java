@@ -69,16 +69,16 @@ public class PegaNumeros extends DialogFragment implements View.OnClickListener 
 
         if(isTitular && MainActivity.LISTA_TITULARES.size() < 10){
 
-            if (MainActivity.LISTA_TITULARES.contains(Integer.parseInt(numSelecionardo.getText().toString()))){
+            if (MainActivity.LISTA_TITULARES.contains(numSelecionardo.getText().toString())){
 
-                int index = MainActivity.LISTA_TITULARES.indexOf(Integer.parseInt(numSelecionardo.getText().toString()));
+                int index = MainActivity.LISTA_TITULARES.indexOf(numSelecionardo.getText().toString());
 
                 MainActivity.LISTA_TITULARES.remove(index);
                 view.setBackgroundResource(0);
                 ((TextView) view).setTextColor(Color.parseColor("#e5e5e5"));
             }
             else{
-                MainActivity.LISTA_TITULARES.add(Integer.parseInt(numSelecionardo.getText().toString()));
+                MainActivity.LISTA_TITULARES.add(numSelecionardo.getText().toString());
                 view.setBackgroundResource(R.drawable.circle_text_borda);
                 ((TextView) view).setTextColor(getResources().getColor(R.color.colorPrimary));
             }
@@ -86,15 +86,15 @@ public class PegaNumeros extends DialogFragment implements View.OnClickListener 
 
         }
         else if (!isTitular && MainActivity.LISTA_RUINS.size() < 15){
-            if(MainActivity.LISTA_RUINS.contains(Integer.parseInt(numSelecionardo.getText().toString()))){
-                int index = MainActivity.LISTA_RUINS.indexOf(Integer.parseInt(numSelecionardo.getText().toString()));
+            if(MainActivity.LISTA_RUINS.contains(numSelecionardo.getText().toString())){
+                int index = MainActivity.LISTA_RUINS.indexOf(numSelecionardo.getText().toString());
 
                 MainActivity.LISTA_RUINS.remove(index);
                 view.setBackgroundResource(0);
                 ((TextView) view).setTextColor(Color.parseColor("#e5e5e5"));
             }
             else {
-                MainActivity.LISTA_RUINS.add(Integer.parseInt(numSelecionardo.getText().toString()));
+                MainActivity.LISTA_RUINS.add(numSelecionardo.getText().toString());
                 view.setBackgroundResource(R.drawable.circle_text_borda);
                 ((TextView) view).setTextColor(getResources().getColor(R.color.colorPrimary));
             }
@@ -196,6 +196,7 @@ public class PegaNumeros extends DialogFragment implements View.OnClickListener 
     }
 
     public void setIsTitular(boolean titular) {
+        Log.e("Teste:", "Ta no set");
         isTitular = titular;
     }
 

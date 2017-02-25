@@ -24,12 +24,12 @@ import java.util.Random;
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.RecyclerViewHolder> {
 
     private String teste;
-    private List<Integer> numerosTitulares = new ArrayList<Integer>();
-    private List<Integer> numerosSortear = new ArrayList<Integer>();
+    private List<String> numerosTitulares = new ArrayList<String>();
+    private List<String> numerosSortear = new ArrayList<String>();
     //private List[] numerosFinais = new ArrayList[10];
     //private List<Integer> numerosFinais = new ArrayList<Integer>();
 
-    private ArrayList<Integer>[][] numerosFinais = new ArrayList[10][10];
+    private ArrayList<String>[][] numerosFinais = new ArrayList[10][10];
 
     int num1, num2, num3, num4, num5;
 
@@ -65,7 +65,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
         }
     }
 
-    public RecyclerAdapter (List<Integer> titulares, List<Integer> numerosSortear){
+    public RecyclerAdapter (List<String> titulares, List<String> numerosSortear){
         this.numerosTitulares = titulares;
         this.numerosSortear = numerosSortear;
         geraNumeros();
@@ -112,12 +112,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
             for (int j = 0; j < numerosTitulares.size(); j++) {
 //                Log.e("o que tem no j:", "" + j);
 //                numerosFinais.add(i, Arrays.asList(j));
-                numerosFinais[i][j] = new ArrayList<Integer>();
+                numerosFinais[i][j] = new ArrayList<String>();
                 numerosFinais[i][j].add(numerosTitulares.get(j));
             }
 
             for (int f = numerosTitulares.size(); f < 10; f++){
-                numerosFinais[i][f] = new ArrayList<Integer>();
+                numerosFinais[i][f] = new ArrayList<String>();
                 numerosFinais[i][f].add(numerosSortear.get(f));
             }
         }
