@@ -4,6 +4,7 @@
     android:id="@+id/edit_name"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     android:layout_gravity="center">
 
     <!--<android.support.v7.widget.Toolbar-->
@@ -18,66 +19,60 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbar_modal"
         android:orientation="vertical"
-        android:padding="8dp">
+        android:padding="4dp">
 
         <LinearLayout
             android:id="@+id/layout_01"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center">
+            android:gravity="center_horizontal">
 
             <TextView
                 android:id="@+id/lbl_01"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@drawable/circle_text_borda"
                 android:onClick="onClick"
                 android:padding="8dp"
                 android:text="01"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="#e5e5e5" />
 
             <TextView
                 android:id="@+id/lbl_02"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@drawable/circle_text_borda"
                 android:padding="8dp"
                 android:text="02"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="#e5e5e5" />
 
             <TextView
                 android:id="@+id/lbl_03"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@drawable/circle_text_borda"
                 android:padding="8dp"
                 android:text="03"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="#e5e5e5" />
 
             <TextView
                 android:id="@+id/lbl_04"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@drawable/circle_text_borda"
                 android:padding="8dp"
                 android:text="04"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="#e5e5e5" />
 
             <TextView
                 android:id="@+id/lbl_05"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@drawable/circle_text_borda"
                 android:padding="8dp"
                 android:text="05"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="#e5e5e5" />
 
         </LinearLayout>
 
@@ -92,50 +87,45 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@drawable/circle_text_borda"
                 android:padding="8dp"
                 android:text="06"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="#e5e5e5" />
 
             <TextView
                 android:id="@+id/lbl_07"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@drawable/circle_text_borda"
                 android:padding="8dp"
                 android:text="07"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="#e5e5e5" />
 
             <TextView
                 android:id="@+id/lbl_08"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@drawable/circle_text_borda"
                 android:padding="8dp"
                 android:text="08"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="#e5e5e5" />
 
             <TextView
                 android:id="@+id/lbl_09"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@drawable/circle_text_borda"
                 android:padding="8dp"
                 android:text="09"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="#e5e5e5" />
 
             <TextView
                 android:id="@+id/lbl_10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@drawable/circle_text_borda"
                 android:padding="8dp"
                 android:text="10"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="#e5e5e5" />
 
         </LinearLayout>
 
@@ -150,50 +140,45 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@drawable/circle_text_borda"
                 android:padding="8dp"
                 android:text="11"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="#e5e5e5" />
 
             <TextView
                 android:id="@+id/lbl_12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@drawable/circle_text_borda"
                 android:padding="8dp"
                 android:text="12"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="#e5e5e5" />
 
             <TextView
                 android:id="@+id/lbl_13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@drawable/circle_text_borda"
                 android:padding="8dp"
                 android:text="13"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="#e5e5e5" />
 
             <TextView
                 android:id="@+id/lbl_14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@drawable/circle_text_borda"
                 android:padding="8dp"
                 android:text="14"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="#e5e5e5" />
 
             <TextView
                 android:id="@+id/lbl_15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@drawable/circle_text_borda"
                 android:padding="8dp"
                 android:text="15"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="#e5e5e5" />
 
         </LinearLayout>
 
@@ -208,50 +193,45 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@drawable/circle_text_borda"
                 android:padding="8dp"
                 android:text="16"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="#e5e5e5" />
 
             <TextView
                 android:id="@+id/lbl_17"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@drawable/circle_text_borda"
                 android:padding="8dp"
                 android:text="17"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="#e5e5e5" />
 
             <TextView
                 android:id="@+id/lbl_18"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@drawable/circle_text_borda"
                 android:padding="8dp"
                 android:text="18"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="#e5e5e5" />
 
             <TextView
                 android:id="@+id/lbl_19"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@drawable/circle_text_borda"
                 android:padding="8dp"
                 android:text="19"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="#e5e5e5" />
 
             <TextView
                 android:id="@+id/lbl_20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@drawable/circle_text_borda"
                 android:padding="8dp"
                 android:text="20"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="#e5e5e5" />
 
         </LinearLayout>
 
@@ -266,60 +246,58 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@drawable/circle_text_borda"
                 android:padding="8dp"
                 android:text="21"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="#e5e5e5" />
 
             <TextView
                 android:id="@+id/lbl_22"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@drawable/circle_text_borda"
                 android:padding="8dp"
                 android:text="22"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="#e5e5e5" />
 
             <TextView
                 android:id="@+id/lbl_23"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@drawable/circle_text_borda"
                 android:padding="8dp"
                 android:text="23"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="#e5e5e5" />
 
             <TextView
                 android:id="@+id/lbl_24"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@drawable/circle_text_borda"
                 android:padding="8dp"
                 android:text="24"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="#e5e5e5" />
 
             <TextView
                 android:id="@+id/lbl_25"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@drawable/circle_text_borda"
                 android:onClick="onClick"
                 android:padding="8dp"
                 android:text="25"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="#e5e5e5" />
 
         </LinearLayout>
-
 
         <Button
             android:id="@+id/btnOK"
             android:layout_width="match_parent"
+            android:layout_gravity="right"
             android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:layout_margin="4dp"
+            android:backgroundTint="@color/colorPrimaryDark"
             android:layout_below="@+id/layout_05"
-            android:text="finish" />
+            android:text="OK" />
     </LinearLayout>
 </RelativeLayout>

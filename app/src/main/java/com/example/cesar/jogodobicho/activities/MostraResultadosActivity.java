@@ -50,9 +50,6 @@ public class MostraResultadosActivity extends AppCompatActivity {
             }
         });
 
-        //tlb.setTitle("Números gerados");
-        
-
 
         Intent it = getIntent();
         Bundle params = it.getExtras();

@@ -175,9 +175,9 @@ public class PegaNumeros extends DialogFragment implements View.OnClickListener 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_pega_titulares, container);
-        getDialog().getWindow().setSoftInputMode(
-                WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
-        getDialog().setTitle("Selecione os números");
+//        getDialog().getWindow().setSoftInputMode(
+//                WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
+        //getDialog().setTitle("Selecione os números");
 
         lbl01 = (TextView) view.findViewById(R.id.lbl_01);
         lbl01.setOnClickListener(this);
