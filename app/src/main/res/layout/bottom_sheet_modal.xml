@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:padding="16dp"
     android:background="#FFFFFF">
 
     <TextView
@@ -11,18 +12,21 @@
         android:layout_height="wrap_content"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
         android:textColor="@color/colorPrimary"
-        android:padding="16dp"
+        android:layout_marginBottom="10dp"
         android:text="Selecione a opção" />
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/item_modal_titulares"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:padding="16dp"
+        android:layout_marginTop="20dp"
         android:textColor="#000000"
+        android:layout_marginBottom="10dp"
         android:onClick="definirNumeros"
-        android:text="Definir titulares" />
+        android:text="Definir Números Titulares" />
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -31,7 +35,8 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#000000"
         android:onClick="definirNumeros"
-        android:padding="16dp"
-        android:text="Números ruins" />
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="10dp"
+        android:text="Definir Números Ruins" />
 
 </LinearLayout>

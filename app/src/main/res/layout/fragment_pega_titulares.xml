@@ -7,19 +7,19 @@
     android:background="@color/colorPrimary"
     android:layout_gravity="center">
 
-    <!--<android.support.v7.widget.Toolbar-->
-        <!--android:id="@+id/toolbar_modal"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_alignParentTop="true"-->
-        <!--android:background="@color/colorPrimary"-->
-        <!--app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"-->
-        <!--app:title="Selecione os números" />-->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_modal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimaryDark"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_below="@+id/toolbar_modal"
         android:padding="4dp">
 
         <LinearLayout

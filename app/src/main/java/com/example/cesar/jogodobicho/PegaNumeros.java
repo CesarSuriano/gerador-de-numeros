@@ -1,16 +1,22 @@
 package com.example.cesar.jogodobicho;
 
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
@@ -200,6 +206,7 @@ public class PegaNumeros extends DialogFragment implements View.OnClickListener 
         isTitular = titular;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -207,6 +214,20 @@ public class PegaNumeros extends DialogFragment implements View.OnClickListener 
 //        getDialog().getWindow().setSoftInputMode(
 //                WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
         //getDialog().setTitle("Selecione os números");
+        getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+
+        Toolbar toolbarModal = (Toolbar)view.findViewById(R.id.toolbar_modal);
+
+        AppCompatActivity activity = (AppCompatActivity) getActivity();
+
+        ((AppCompatActivity)getActivity()).setSupportActionBar(toolbarModal);
+
+        if (isTitular){
+            toolbarModal.setTitle("Selecione os Titulares");
+        }
+        else{
+            toolbarModal.setTitle("Selecione os Ruins");
+        }
 
         lbl01 = (TextView) view.findViewById(R.id.lbl_01);
         lbl01.setOnClickListener(this);
