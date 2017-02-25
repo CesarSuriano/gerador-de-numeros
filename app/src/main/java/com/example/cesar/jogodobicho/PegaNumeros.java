@@ -68,14 +68,36 @@ public class PegaNumeros extends DialogFragment implements View.OnClickListener 
         TextView numSelecionardo = (TextView) view;
 
         if(isTitular && MainActivity.LISTA_TITULARES.size() < 10){
-            MainActivity.LISTA_TITULARES.add(Integer.parseInt(numSelecionardo.getText().toString()));
-            view.setBackgroundResource(R.drawable.circle_text_borda);
-            ((TextView) view).setTextColor(getResources().getColor(R.color.colorPrimary));
+
+            if (MainActivity.LISTA_TITULARES.contains(Integer.parseInt(numSelecionardo.getText().toString()))){
+
+                int index = MainActivity.LISTA_TITULARES.indexOf(Integer.parseInt(numSelecionardo.getText().toString()));
+
+                MainActivity.LISTA_TITULARES.remove(index);
+                view.setBackgroundResource(0);
+                ((TextView) view).setTextColor(Color.parseColor("#e5e5e5"));
+            }
+            else{
+                MainActivity.LISTA_TITULARES.add(Integer.parseInt(numSelecionardo.getText().toString()));
+                view.setBackgroundResource(R.drawable.circle_text_borda);
+                ((TextView) view).setTextColor(getResources().getColor(R.color.colorPrimary));
+            }
+
+
         }
         else if (!isTitular && MainActivity.LISTA_RUINS.size() < 15){
-            MainActivity.LISTA_RUINS.add(Integer.parseInt(numSelecionardo.getText().toString()));
-            view.setBackgroundResource(R.drawable.circle_text_borda);
-            ((TextView) view).setTextColor(getResources().getColor(R.color.colorPrimary));
+            if(MainActivity.LISTA_RUINS.contains(Integer.parseInt(numSelecionardo.getText().toString()))){
+                int index = MainActivity.LISTA_RUINS.indexOf(Integer.parseInt(numSelecionardo.getText().toString()));
+
+                MainActivity.LISTA_RUINS.remove(index);
+                view.setBackgroundResource(0);
+                ((TextView) view).setTextColor(Color.parseColor("#e5e5e5"));
+            }
+            else {
+                MainActivity.LISTA_RUINS.add(Integer.parseInt(numSelecionardo.getText().toString()));
+                view.setBackgroundResource(R.drawable.circle_text_borda);
+                ((TextView) view).setTextColor(getResources().getColor(R.color.colorPrimary));
+            }
         }
 
 
