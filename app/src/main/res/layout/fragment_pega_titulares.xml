@@ -1,313 +1,325 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/edit_name"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
-    android:padding="8dp"
-    >
+    android:layout_gravity="center">
+
+    <!--<android.support.v7.widget.Toolbar-->
+        <!--android:id="@+id/toolbar_modal"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:background="@color/colorPrimary"-->
+        <!--app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"-->
+        <!--app:title="Selecione os números" />-->
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:id="@+id/layout_01">
+        android:layout_below="@+id/toolbar_modal"
+        android:orientation="vertical"
+        android:padding="8dp">
 
-        <TextView
-            android:id="@+id/lbl_01"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/layout_01"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"
-            android:layout_margin="8dp"
-            android:padding="8dp"
-            android:onClick="onClick"
-            android:background="@drawable/circle_text_borda"
-            android:text="01" />
+            android:gravity="center">
 
-        <TextView
-            android:id="@+id/lbl_02"
-            android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/lbl_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/circle_text_borda"
+                android:onClick="onClick"
+                android:padding="8dp"
+                android:text="01"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/lbl_02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/circle_text_borda"
+                android:padding="8dp"
+                android:text="02"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/lbl_03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/circle_text_borda"
+                android:padding="8dp"
+                android:text="03"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/lbl_04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/circle_text_borda"
+                android:padding="8dp"
+                android:text="04"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/lbl_05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/circle_text_borda"
+                android:padding="8dp"
+                android:text="05"
+                android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_02"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:textColor="@color/colorPrimary"
-            android:padding="8dp"
-            android:background="@drawable/circle_text_borda"
-            android:text="02" />
+            android:gravity="center">
 
-        <TextView
-            android:id="@+id/lbl_03"
-            android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/lbl_06"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/circle_text_borda"
+                android:padding="8dp"
+                android:text="06"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/lbl_07"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/circle_text_borda"
+                android:padding="8dp"
+                android:text="07"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/lbl_08"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/circle_text_borda"
+                android:padding="8dp"
+                android:text="08"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/lbl_09"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/circle_text_borda"
+                android:padding="8dp"
+                android:text="09"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/lbl_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/circle_text_borda"
+                android:padding="8dp"
+                android:text="10"
+                android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_03"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:textColor="@color/colorPrimary"
-            android:padding="8dp"
-            android:background="@drawable/circle_text_borda"
-            android:text="03" />
+            android:gravity="center">
 
-        <TextView
-            android:id="@+id/lbl_04"
-            android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/lbl_11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/circle_text_borda"
+                android:padding="8dp"
+                android:text="11"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/lbl_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/circle_text_borda"
+                android:padding="8dp"
+                android:text="12"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/lbl_13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/circle_text_borda"
+                android:padding="8dp"
+                android:text="13"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/lbl_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/circle_text_borda"
+                android:padding="8dp"
+                android:text="14"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/lbl_15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/circle_text_borda"
+                android:padding="8dp"
+                android:text="15"
+                android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_04"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"
-            android:layout_margin="8dp"
-            android:padding="8dp"
-            android:background="@drawable/circle_text_borda"
-            android:text="04" />
+            android:gravity="center">
 
-        <TextView
-            android:id="@+id/lbl_05"
-            android:layout_width="wrap_content"
-            android:layout_margin="8dp"
+            <TextView
+                android:id="@+id/lbl_16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/circle_text_borda"
+                android:padding="8dp"
+                android:text="16"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/lbl_17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/circle_text_borda"
+                android:padding="8dp"
+                android:text="17"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/lbl_18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/circle_text_borda"
+                android:padding="8dp"
+                android:text="18"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/lbl_19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/circle_text_borda"
+                android:padding="8dp"
+                android:text="19"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/lbl_20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/circle_text_borda"
+                android:padding="8dp"
+                android:text="20"
+                android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_05"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"
-            android:padding="8dp"
-            android:background="@drawable/circle_text_borda"
-            android:text="05" />
+            android:gravity="center">
 
+            <TextView
+                android:id="@+id/lbl_21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/circle_text_borda"
+                android:padding="8dp"
+                android:text="21"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/lbl_22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/circle_text_borda"
+                android:padding="8dp"
+                android:text="22"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/lbl_23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/circle_text_borda"
+                android:padding="8dp"
+                android:text="23"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/lbl_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/circle_text_borda"
+                android:padding="8dp"
+                android:text="24"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/lbl_25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/circle_text_borda"
+                android:onClick="onClick"
+                android:padding="8dp"
+                android:text="25"
+                android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btnOK"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_05"
+            android:text="finish" />
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/layout_01"
-        android:gravity="center"
-        android:id="@+id/layout_02">
-
-        <TextView
-            android:id="@+id/lbl_06"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"
-            android:layout_margin="8dp"
-            android:padding="8dp"
-            android:background="@drawable/circle_text_borda"
-            android:text="06" />
-
-        <TextView
-            android:id="@+id/lbl_07"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:textColor="@color/colorPrimary"
-            android:padding="8dp"
-            android:background="@drawable/circle_text_borda"
-            android:text="07" />
-
-        <TextView
-            android:id="@+id/lbl_08"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:textColor="@color/colorPrimary"
-            android:padding="8dp"
-            android:background="@drawable/circle_text_borda"
-            android:text="08" />
-
-        <TextView
-            android:id="@+id/lbl_09"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"
-            android:layout_margin="8dp"
-            android:padding="8dp"
-            android:background="@drawable/circle_text_borda"
-            android:text="09" />
-
-        <TextView
-            android:id="@+id/lbl_10"
-            android:layout_width="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"
-            android:padding="8dp"
-            android:background="@drawable/circle_text_borda"
-            android:text="10" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/layout_02"
-        android:gravity="center"
-        android:id="@+id/layout_03">
-
-        <TextView
-            android:id="@+id/lbl_11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"
-            android:layout_margin="8dp"
-            android:padding="8dp"
-            android:background="@drawable/circle_text_borda"
-            android:text="11" />
-
-        <TextView
-            android:id="@+id/lbl_12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:textColor="@color/colorPrimary"
-            android:padding="8dp"
-            android:background="@drawable/circle_text_borda"
-            android:text="12" />
-
-        <TextView
-            android:id="@+id/lbl_13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:textColor="@color/colorPrimary"
-            android:padding="8dp"
-            android:background="@drawable/circle_text_borda"
-            android:text="13" />
-
-        <TextView
-            android:id="@+id/lbl_14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"
-            android:layout_margin="8dp"
-            android:padding="8dp"
-            android:background="@drawable/circle_text_borda"
-            android:text="14" />
-
-        <TextView
-            android:id="@+id/lbl_15"
-            android:layout_width="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"
-            android:padding="8dp"
-            android:background="@drawable/circle_text_borda"
-            android:text="15" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/layout_03"
-        android:gravity="center"
-        android:id="@+id/layout_04">
-
-        <TextView
-            android:id="@+id/lbl_16"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"
-            android:layout_margin="8dp"
-            android:padding="8dp"
-            android:background="@drawable/circle_text_borda"
-            android:text="16" />
-
-        <TextView
-            android:id="@+id/lbl_17"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:textColor="@color/colorPrimary"
-            android:padding="8dp"
-            android:background="@drawable/circle_text_borda"
-            android:text="17" />
-
-        <TextView
-            android:id="@+id/lbl_18"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:textColor="@color/colorPrimary"
-            android:padding="8dp"
-            android:background="@drawable/circle_text_borda"
-            android:text="18" />
-
-        <TextView
-            android:id="@+id/lbl_19"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"
-            android:layout_margin="8dp"
-            android:padding="8dp"
-            android:background="@drawable/circle_text_borda"
-            android:text="19" />
-
-        <TextView
-            android:id="@+id/lbl_20"
-            android:layout_width="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"
-            android:padding="8dp"
-            android:background="@drawable/circle_text_borda"
-            android:text="20" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/layout_04"
-        android:gravity="center"
-        android:id="@+id/layout_05">
-
-        <TextView
-            android:id="@+id/lbl_21"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"
-            android:layout_margin="8dp"
-            android:padding="8dp"
-            android:background="@drawable/circle_text_borda"
-            android:text="21" />
-
-        <TextView
-            android:id="@+id/lbl_22"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:textColor="@color/colorPrimary"
-            android:padding="8dp"
-            android:background="@drawable/circle_text_borda"
-            android:text="22" />
-
-        <TextView
-            android:id="@+id/lbl_23"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:textColor="@color/colorPrimary"
-            android:padding="8dp"
-            android:background="@drawable/circle_text_borda"
-            android:text="23" />
-
-        <TextView
-            android:id="@+id/lbl_24"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"
-            android:layout_margin="8dp"
-            android:padding="8dp"
-            android:background="@drawable/circle_text_borda"
-            android:text="24" />
-
-        <TextView
-            android:id="@+id/lbl_25"
-            android:layout_width="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"
-            android:padding="8dp"
-            android:background="@drawable/circle_text_borda"
-            android:onClick="onClick"
-            android:text="25" />
-
-    </LinearLayout>
-
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnOK"
-        android:layout_below="@+id/layout_05"
-        android:text="finish" />
 </RelativeLayout>
