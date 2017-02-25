@@ -2,6 +2,8 @@ package com.example.cesar.jogodobicho;
 
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
@@ -65,11 +67,15 @@ public class PegaNumeros extends DialogFragment implements View.OnClickListener 
     public void onClick(View view) {
         TextView numSelecionardo = (TextView) view;
 
-        if(isTitular){
+        if(isTitular && MainActivity.LISTA_TITULARES.size() < 10){
             MainActivity.LISTA_TITULARES.add(Integer.parseInt(numSelecionardo.getText().toString()));
+            view.setBackgroundResource(R.drawable.circle_text_borda);
+            ((TextView) view).setTextColor(getResources().getColor(R.color.colorPrimary));
         }
-        else{
+        else if (!isTitular && MainActivity.LISTA_RUINS.size() < 15){
             MainActivity.LISTA_RUINS.add(Integer.parseInt(numSelecionardo.getText().toString()));
+            view.setBackgroundResource(R.drawable.circle_text_borda);
+            ((TextView) view).setTextColor(getResources().getColor(R.color.colorPrimary));
         }
 
 
