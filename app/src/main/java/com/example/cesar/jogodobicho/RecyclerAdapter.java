@@ -24,6 +24,7 @@ import java.util.Random;
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.RecyclerViewHolder> {
 
     private String teste;
+    public static int qtdeJogos = 10;
     private List<String> numerosTitulares = new ArrayList<String>();
     private List<String> numerosSortear = new ArrayList<String>();
     //private List[] numerosFinais = new ArrayList[10];
@@ -99,7 +100,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
 
     @Override
     public int getItemCount() {
-        return 10;
+        return qtdeJogos;
     }
 
 
