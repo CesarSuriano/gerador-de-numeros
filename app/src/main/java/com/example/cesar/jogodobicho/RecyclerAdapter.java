@@ -30,7 +30,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
     //private List[] numerosFinais = new ArrayList[10];
     //private List<Integer> numerosFinais = new ArrayList<Integer>();
 
-    private ArrayList<String>[][] numerosFinais = new ArrayList[10][10];
+    private ArrayList<String>[][] numerosFinais = new ArrayList[15][15];
 
     int num1, num2, num3, num4, num5;
 
@@ -89,7 +89,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
         holder.tvAvatar.setText(position + 1 + "");
 
 
-        for (int i = 0; i <10; i++) {
+        for (int i = 0; i < 10; i++) {
 
                 holder.txtNumeros[i].setText(numerosFinais[position][i].toString().replace("[", " ").replace("]", " "));
 
@@ -108,7 +108,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
 
         //
 
-        for ( int i = 0; i < 10; i++ ){
+        for ( int i = 0; i < 15; i++ ){
             Collections.shuffle(numerosSortear);
             for (int j = 0; j < numerosTitulares.size(); j++) {
 //                Log.e("o que tem no j:", "" + j);
@@ -117,7 +117,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
                 numerosFinais[i][j].add(numerosTitulares.get(j));
             }
 
-            for (int f = numerosTitulares.size(); f < 10; f++){
+            for (int f = numerosTitulares.size(); f < 15; f++){
                 numerosFinais[i][f] = new ArrayList<String>();
                 numerosFinais[i][f].add(numerosSortear.get(f));
             }
