@@ -11,6 +11,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.NumberPicker;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +30,9 @@ public class MainActivity extends AppCompatActivity implements PegaNumeros.UserN
     private TextView definirTitulares;
     private TextView qtdeJogos;
 
+    private RadioGroup rgJogos;
+    private int is10_4 = 1; //Verifica se o jogo é o 10/4
+
     public static ArrayList<String> LISTA_TITULARES = new ArrayList<String>();
     public static ArrayList<String> LISTA_RUINS = new ArrayList<String>();
 
@@ -41,6 +46,26 @@ public class MainActivity extends AppCompatActivity implements PegaNumeros.UserN
 
         definirTitulares = (TextView) findViewById(R.id.txtDefinirTitulares);
         qtdeJogos = (TextView) findViewById(R.id.txtQtdeJogos);
+        rgJogos = (RadioGroup) findViewById(R.id.rgJogos);
+
+        rgJogos.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
+        {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId)
+            {
+                switch (checkedId)
+                {
+                    case R.id.rbDezPorQuatro:
+                        is10_4 = 1;
+                        break;
+                    case R.id.rbSetePorQuatro:
+                        is10_4 = 0;
+                        break;
+                    default:
+                        Toast.makeText(MainActivity.this, "Deu merda!!! Chama o César", Toast.LENGTH_SHORT).show();;
+                }
+            }
+        });
     }
 
 
@@ -80,6 +105,7 @@ public class MainActivity extends AppCompatActivity implements PegaNumeros.UserN
 //        params.putParcelableArrayList("num", LISTA_TITULARES);
         it.putStringArrayListExtra("titulares", LISTA_TITULARES);
         it.putStringArrayListExtra("ruins", LISTA_RUINS);
+        it.putExtra("is10_4", is10_4);
         startActivity(it);
 
     }

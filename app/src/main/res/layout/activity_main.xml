@@ -12,6 +12,42 @@
     android:background="@color/colorPrimary"
     tools:context="com.example.cesar.jogodobicho.activities.MainActivity">
 
+    <RadioGroup
+        android:id="@+id/rgJogos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rbDezPorQuatro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rbtn_selector"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="10/4"
+            android:textColor="@drawable/rbtn_textcolor_selector" />
+
+        <RadioButton
+            android:id="@+id/rbSetePorQuatro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rbtn_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="7/4"
+            android:textColor="@drawable/rbtn_textcolor_selector" />
+
+    </RadioGroup>
+
+
     <Button
         android:text="Gerar números"
         android:textColor="@color/colorPrimaryText"

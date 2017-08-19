@@ -27,6 +27,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
     public static int qtdeJogos = 10;
     private List<String> numerosTitulares = new ArrayList<String>();
     private List<String> numerosSortear = new ArrayList<String>();
+    private int qtdeNumeros;
     //private List[] numerosFinais = new ArrayList[10];
     //private List<Integer> numerosFinais = new ArrayList<Integer>();
 
@@ -66,7 +67,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
         }
     }
 
-    public RecyclerAdapter (List<String> titulares, List<String> numerosSortear){
+    public RecyclerAdapter (List<String> titulares, List<String> numerosSortear, int is10_4){
+
+        if(is10_4 == 1) {
+            this.qtdeNumeros = 10;
+        } else {
+            this.qtdeNumeros = 7;
+        }
         this.numerosTitulares = titulares;
         this.numerosSortear = numerosSortear;
         geraNumeros();
@@ -89,7 +96,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
         holder.tvAvatar.setText(position + 1 + "");
 
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < qtdeNumeros; i++) {
 
                 holder.txtNumeros[i].setText(numerosFinais[position][i].toString().replace("[", " ").replace("]", " "));
 
