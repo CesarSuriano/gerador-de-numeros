@@ -56,7 +56,7 @@ public class MostraResultadosActivity extends AppCompatActivity {
 
         List<String> titulares = params.getStringArrayList("titulares");
         List<String> ruins = params.getStringArrayList("ruins");
-        int is10_4 = params.getInt("is10_4");
+        String jogo_selecionado = params.getString("jogo_selecionado");
 
         Collections.sort(titulares);
         Collections.sort(ruins);
@@ -87,7 +87,7 @@ public class MostraResultadosActivity extends AppCompatActivity {
         mLinearLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLinearLayoutManager);
 
-        RecyclerAdapter adapter = new RecyclerAdapter(titulares, numerosSortear, is10_4);
+        RecyclerAdapter adapter = new RecyclerAdapter(titulares, numerosSortear, jogo_selecionado);
         mRecyclerView.setAdapter(adapter);
     }
 

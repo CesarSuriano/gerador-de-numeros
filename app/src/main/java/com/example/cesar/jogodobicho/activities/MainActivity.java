@@ -2,16 +2,13 @@ package com.example.cesar.jogodobicho.activities;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
 import android.support.design.widget.BottomSheetDialogFragment;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.NumberPicker;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,15 +20,14 @@ import com.example.cesar.jogodobicho.RecyclerAdapter;
 
 import java.util.ArrayList;
 
-import biz.kasual.materialnumberpicker.MaterialNumberPicker;
-
 public class MainActivity extends AppCompatActivity implements PegaNumeros.UserNameListener {
 
     private TextView definirTitulares;
     private TextView qtdeJogos;
 
     private RadioGroup rgJogos;
-    private int is10_4 = 1; //Verifica se o jogo é o 10/4
+
+    private String jogo_selecionado = "DEZ_POR_QUATRO";
 
     public static ArrayList<String> LISTA_TITULARES = new ArrayList<String>();
     public static ArrayList<String> LISTA_RUINS = new ArrayList<String>();
@@ -56,10 +52,16 @@ public class MainActivity extends AppCompatActivity implements PegaNumeros.UserN
                 switch (checkedId)
                 {
                     case R.id.rbDezPorQuatro:
-                        is10_4 = 1;
+                        jogo_selecionado = "DEZ_POR_QUATRO";
                         break;
                     case R.id.rbSetePorQuatro:
-                        is10_4 = 0;
+                        jogo_selecionado = "SETE_POR_QUATRO";
+                        break;
+                    case R.id.rbDozePorCinco:
+                        jogo_selecionado = "DOZE_POR_CINCO";
+                        break;
+                    case R.id.rbQuinzePorCinco:
+                        jogo_selecionado = "QUINZE_POR_CINCO";
                         break;
                     default:
                         Toast.makeText(MainActivity.this, "Deu merda!!! Chama o César", Toast.LENGTH_SHORT).show();;
@@ -105,7 +107,7 @@ public class MainActivity extends AppCompatActivity implements PegaNumeros.UserN
 //        params.putParcelableArrayList("num", LISTA_TITULARES);
         it.putStringArrayListExtra("titulares", LISTA_TITULARES);
         it.putStringArrayListExtra("ruins", LISTA_RUINS);
-        it.putExtra("is10_4", is10_4);
+        it.putExtra("jogo_selecionado", jogo_selecionado);
         startActivity(it);
 
     }

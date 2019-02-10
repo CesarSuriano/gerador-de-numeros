@@ -38,7 +38,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
 
     public static class RecyclerViewHolder extends RecyclerView.ViewHolder {
 
-        TextView[] txtNumeros = new TextView[10];//{} tv1, tv2, tv3, tv4 , tv5, tv6, tv7, tv8, tv9, tv10,
+        TextView[] txtNumeros = new TextView[15];//{} tv1, tv2, tv3, tv4 , tv5, tv6, tv7, tv8, tv9, tv10,
         TextView tvAvatar;
         ImageView imageView;
         public List<Integer> lista;
@@ -58,6 +58,11 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
             txtNumeros[7] = (TextView) itemView.findViewById(R.id.txt8);
             txtNumeros[8] = (TextView) itemView.findViewById(R.id.txt9);
             txtNumeros[9] = (TextView) itemView.findViewById(R.id.txt10);
+            txtNumeros[10] = (TextView) itemView.findViewById(R.id.txt11);
+            txtNumeros[11] = (TextView) itemView.findViewById(R.id.txt12);
+            txtNumeros[12] = (TextView) itemView.findViewById(R.id.txt13);
+            txtNumeros[13] = (TextView) itemView.findViewById(R.id.txt14);
+            txtNumeros[14] = (TextView) itemView.findViewById(R.id.txt15);
 
 
 
@@ -67,13 +72,23 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
         }
     }
 
-    public RecyclerAdapter (List<String> titulares, List<String> numerosSortear, int is10_4){
+    public RecyclerAdapter (List<String> titulares, List<String> numerosSortear, String jogoSelecionado){
 
-        if(is10_4 == 1) {
-            this.qtdeNumeros = 10;
-        } else {
-            this.qtdeNumeros = 7;
+        switch (jogoSelecionado){
+            case "DEZ_POR_QUATRO":
+                this.qtdeNumeros = 10;
+                break;
+            case "SETE_POR_QUATRO":
+                this.qtdeNumeros = 7;
+                break;
+            case "DOZE_POR_CINCO":
+                this.qtdeNumeros = 12;
+                break;
+            case "QUINZE_POR_CINCO":
+                this.qtdeNumeros = 15;
+                break;
         }
+
         this.numerosTitulares = titulares;
         this.numerosSortear = numerosSortear;
         geraNumeros();
@@ -114,10 +129,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
     public void geraNumeros() {
 
         //
-
+        Log.i("ta aquii", "ta aquiiii");
         for ( int i = 0; i < 15; i++ ){
+            Log.i("no for 1", i + "");
             Collections.shuffle(numerosSortear);
             for (int j = 0; j < numerosTitulares.size(); j++) {
+                Log.i("no for 2", j + "");
 //                Log.e("o que tem no j:", "" + j);
 //                numerosFinais.add(i, Arrays.asList(j));
                 numerosFinais[i][j] = new ArrayList<String>();
@@ -125,6 +142,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
             }
 
             for (int f = numerosTitulares.size(); f < 15; f++){
+                Log.i("no for 3", f + "");
                 numerosFinais[i][f] = new ArrayList<String>();
                 numerosFinais[i][f].add(numerosSortear.get(f));
             }
